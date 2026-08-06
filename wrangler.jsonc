@@ -2,7 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pas-drone-website",
   "compatibility_date": "2026-07-27",
-  "pages_build_output_dir": ".",
+  "assets": (
+    "directory": "."
+),
   "send_email": [
     {
       "name": "EMAIL",
