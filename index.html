@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Patriot Aerial Solutions | Drone Inspections & Imaging</title>
-  <meta name="description" content="Veteran-owned drone inspections, thermal imaging, solar inspections, construction progress, insurance documentation and aerial photography serving Orange County and Los Angeles County.">
+  <title>Patriot Aerial Solutions | Aerial Inspections & Photography</title>
+  <meta name="description" content="Veteran-owned aerial inspections, roof documentation, construction progress, insurance documentation and professional photography serving Orange County and Los Angeles County.">
   <meta name="theme-color" content="#07182f">
   <style>
     :root{
@@ -54,14 +54,11 @@
     .gallery-title p{color:var(--muted);margin:6px 0 12px}
     .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;background:#fff;padding:0 5px 5px}
     .photo-grid img{height:190px;width:100%;object-fit:cover}
-    .thermal-band{margin-top:30px;background:linear-gradient(135deg,#111b32,#7a1630);color:white;border-radius:16px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
-    .thermal-band img{height:100%;min-height:320px;object-fit:cover;width:100%}
-    .thermal-copy{padding:42px}.thermal-copy h3{font-size:2.2rem;margin:0 0 14px;text-transform:uppercase}.thermal-copy p{color:#f3dce3}
 
     .technology{background:linear-gradient(135deg,#eef3f9,#fff)}
     .tech-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:36px;align-items:stretch}
     .tech-card{background:#07182f;color:white;border-radius:18px;padding:38px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-    .tech-card:after{content:"M4T";position:absolute;right:-8px;bottom:-42px;font-size:11rem;font-weight:900;color:rgba(255,255,255,.035);line-height:1}
+    .tech-card:after{content:"AIR 3S";position:absolute;right:-8px;bottom:-42px;font-size:11rem;font-weight:900;color:rgba(255,255,255,.035);line-height:1}
     .tech-card h3{font-size:2.25rem;line-height:1;margin:10px 0 18px;text-transform:uppercase}
     .tech-card p{color:#d8e3f0;max-width:650px}
     .tech-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;position:relative;z-index:1}
@@ -88,15 +85,24 @@
     input,select,textarea{width:100%;padding:14px;border:1px solid #cdd7e4;border-radius:7px;font:inherit}
     textarea{min-height:125px;resize:vertical}
     form .btn{border:0;cursor:pointer}
+
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+    .form-status{display:none;border-radius:7px;padding:12px 14px;font-weight:800;text-align:center}
+    .form-status.show{display:block}
+    .form-status.success{background:#e8f7ee;color:#176a38;border:1px solid #a9dfba}
+    .form-status.error{background:#fff0f0;color:#8d2020;border:1px solid #efb4b4}
+    .hp-field{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+    button[disabled]{opacity:.65;cursor:not-allowed;transform:none!important}
+
     footer{background:#030d1d;color:#bdc9d9;padding:28px 0;font-size:.9rem}
     .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     @media(max-width:900px){
       nav a:not(.btn){display:none}.hero{background-position:60% center}.hero-copy{max-width:610px}
       .badges{grid-template-columns:1fr 1fr}.service-grid{grid-template-columns:1fr 1fr}
-      .gallery-block,.about-grid,.contact-grid,.thermal-band,.tech-grid{grid-template-columns:1fr}
-      .thermal-band img{max-height:350px}.checks,.tech-specs,.why-grid{grid-template-columns:1fr}
+      .gallery-block,.about-grid,.contact-grid,.tech-grid{grid-template-columns:1fr}.checks,.tech-specs,.why-grid{grid-template-columns:1fr}
     }
     @media(max-width:620px){
+      .form-row{grid-template-columns:1fr}
       .brand-copy{display:none}.nav{min-height:70px}.brand-logo{width:58px;height:52px}
       h1{font-size:2.65rem}.hero{min-height:570px;background-position:66% center}
       .badges,.service-grid{grid-template-columns:1fr}.badge{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}
@@ -108,7 +114,7 @@
   <div class="topbar">
     <div class="container">
       <span>Veteran Owned & Operated • FAA Certified Remote Pilot (Part 107)</span>
-      <span>(310) 500-8734 • HaynEnterprisesLLC@gmail.com</span>
+      <span>(714) 501-1719 • info@pas-drone.com</span>
     </div>
   </div>
 
@@ -134,7 +140,7 @@
         <div class="hero-copy">
           <div class="kicker">Professional aerial inspections and imaging</div>
           <h1>Elevated inspections.<br>Superior results.</h1>
-          <p>Commercial and residential inspections, thermal imaging, construction progress, solar inspections, insurance documentation and aerial real-estate photography throughout Orange County and Los Angeles County.</p>
+          <p>Professional aerial inspections, high-resolution photography, construction progress documentation, roof inspections, insurance documentation, solar inspections and real-estate imagery throughout Orange County and Los Angeles County.</p>
           <div class="hero-actions">
             <a class="btn btn-red" href="#services">Explore Services →</a>
             <a class="btn btn-outline" href="#contact">Request a Quote →</a>
@@ -147,7 +153,7 @@
       <div class="badge"><span>★</span>Veteran Owned</div>
       <div class="badge"><span>✈</span>FAA Commercial Pilot</div>
       <div class="badge"><span>✓</span>FAA Certified Remote Pilot (Part 107)</div>
-      <div class="badge"><span>◆</span>20+ Years Federal Law Enforcement</div>
+      <div class="badge"><span>📷</span>High-Resolution Aerial Imaging</div>
     </div>
 
     <section class="services" id="services">
@@ -159,11 +165,10 @@
         <div class="service-grid">
           <article class="service"><div class="service-icon">🏢</div><h3>Commercial Inspections</h3><p>Roof, façade, warehouse, apartment, office and exterior property documentation.</p></article>
           <article class="service"><div class="service-icon">🏠</div><h3>Residential Inspections</h3><p>High-resolution views of roofs, gutters, solar systems and difficult-to-reach areas.</p></article>
-          <article class="service"><div class="service-icon">🌡️</div><h3>Thermal Imaging</h3><p>Thermal data collection supporting roof, solar, electrical and moisture investigations.</p></article>
           <article class="service"><div class="service-icon">🏗️</div><h3>Construction Progress</h3><p>Recurring site documentation and professional visual updates for stakeholders.</p></article>
           <article class="service"><div class="service-icon">📷</div><h3>Aerial Photography</h3><p>Professional imagery for real estate, marketing, documentation and project records.</p></article>
           <article class="service"><div class="service-icon">📋</div><h3>Insurance Documentation</h3><p>Clear aerial imagery documenting exterior property conditions for owners, adjusters and insurance professionals.</p></article>
-          <article class="service"><div class="service-icon">☀️</div><h3>Solar Inspections</h3><p>Visual and thermal data collection supporting solar-panel condition and performance reviews.</p></article>
+          <article class="service"><div class="service-icon">☀️</div><h3>Solar Inspections</h3><p>High-resolution visual documentation of solar-panel condition, mounting areas and accessible roof surroundings.</p></article>
           <article class="service"><div class="service-icon">🏘️</div><h3>Real Estate Photography</h3><p>Professional aerial imagery for residential, commercial and investment-property marketing.</p></article>
         </div>
       </div>
@@ -182,7 +187,7 @@
             <div class="photo-grid">
               <img src="assets/residential-estate.jpg" alt="Aerial view of a residential property">
               <img src="assets/residential-roof.jpg" alt="Drone roof inspection">
-              <img src="assets/thermal-roof.jpg" alt="Thermal roof inspection">
+              <img src="assets/hero-drone.jpg" alt="Professional aerial inspection platform in flight">
             </div>
           </article>
           <article class="gallery-panel">
@@ -194,42 +199,31 @@
             </div>
           </article>
         </div>
-
-        <div class="thermal-band">
-          <img src="assets/thermal-roof.jpg" alt="Thermal inspection imaging">
-          <div class="thermal-copy">
-            <div class="kicker">Thermal capability</div>
-            <h3>See what standard imagery cannot.</h3>
-            <p>Thermal imaging can help document temperature differences associated with roof anomalies, solar-panel performance, heat loss and potential electrical concerns. Findings should be interpreted by the appropriate qualified professional.</p>
-            <a class="btn btn-red" href="#contact">Discuss a Thermal Mission</a>
-          </div>
-        </div>
       </div>
     </section>
-
 
     <section class="technology" id="technology">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="kicker" style="color:#c72a2a">Enterprise inspection technology</div>
-            <h2>DJI Matrice 4T</h2>
+            <div class="kicker" style="color:#c72a2a">Professional aerial imaging technology</div>
+            <h2>DJI Air 3S</h2>
           </div>
-          <p>Professional multi-sensor equipment selected for detailed visual and thermal data collection in demanding commercial and residential environments.</p>
+          <p>A modern aerial imaging platform selected for sharp photography, smooth video and dependable documentation in commercial and residential environments.</p>
         </div>
 
         <div class="tech-grid">
           <article class="tech-card">
             <div class="kicker">Our inspection platform</div>
-            <h3>More than an aerial camera.</h3>
-            <p>The DJI Matrice 4T combines wide, medium-telephoto and telephoto cameras with a thermal imaging sensor, laser range finding and enhanced low-light capability. This allows PAS to collect detailed data while reducing the need for ladders, lifts, scaffolding and unnecessary roof access.</p>
+            <h3>Professional imaging from a safer perspective.</h3>
+            <p>The DJI Air 3S combines a high-resolution 1-inch primary camera, a medium-telephoto camera, stabilized 4K video and intelligent flight features. PAS uses it to capture detailed visual documentation while reducing the need for ladders, lifts, scaffolding and unnecessary roof access.</p>
             <div class="tech-specs">
-              <div class="tech-spec">48 MP Wide-Angle Imaging</div>
-              <div class="tech-spec">48 MP Medium Telephoto</div>
-              <div class="tech-spec">48 MP Telephoto Camera</div>
-              <div class="tech-spec">Radiometric Thermal Imaging</div>
-              <div class="tech-spec">Laser Range Finder</div>
-              <div class="tech-spec">Low-Light Inspection Capability</div>
+              <div class="tech-spec">50 MP 1-Inch Primary Camera</div>
+              <div class="tech-spec">48 MP Medium Telephoto Camera</div>
+              <div class="tech-spec">Stabilized 4K Video</div>
+              <div class="tech-spec">High-Resolution Still Photography</div>
+              <div class="tech-spec">Intelligent Flight Planning</div>
+              <div class="tech-spec">Low-Light Aerial Imaging</div>
             </div>
           </article>
 
@@ -237,8 +231,8 @@
             <div class="why-item"><strong>Improve Safety</strong>Collect detailed imagery while limiting exposure to roofs, heights and difficult-to-access areas.</div>
             <div class="why-item"><strong>Reduce Disruption</strong>Inspect many exterior areas without extensive staging, scaffolding or heavy equipment.</div>
             <div class="why-item"><strong>Document Conditions</strong>Create organized visual records for contractors, property owners and project stakeholders.</div>
-            <div class="why-item"><strong>Capture Thermal Data</strong>Document temperature differences that may warrant review by a qualified specialist.</div>
-            <div class="why-item"><strong>Inspect from a Distance</strong>Use telephoto imaging to examine details without flying unnecessarily close to structures.</div>
+            <div class="why-item"><strong>Capture Clear Visual Data</strong>Provide high-resolution photographs and video that clients can review, share and archive.</div>
+            <div class="why-item"><strong>Inspect from a Distance</strong>Use the medium-telephoto camera to document details without flying unnecessarily close to structures.</div>
             <div class="why-item"><strong>Operate Professionally</strong>Mission planning, FAA compliance and safety-focused execution on every project.</div>
           </div>
         </div>
@@ -261,15 +255,15 @@
         <div>
           <div class="kicker">Built on integrity. Focused on safety.</div>
           <h2>Professional aviation discipline on every mission.</h2>
-          <p>Patriot Aerial Solutions is a veteran-owned aerial inspection and imaging company founded by Jason H., an FAA Commercial Pilot and FAA Certified Remote Pilot with more than 20 years of federal law-enforcement experience.</p>
+          <p>Patriot Aerial Solutions is a veteran-owned aerial inspection and imaging company led by an FAA Commercial Pilot and FAA Certified Remote Pilot. Every project emphasizes safe operations, clear communication and professional visual documentation.</p>
           <div class="checks">
             <div class="check">Veteran Owned & Operated</div>
             <div class="check">FAA Commercial Pilot</div>
             <div class="check">FAA Certified Remote Pilot (Part 107)</div>
-            <div class="check">20+ Years Federal Law Enforcement</div>
+            <div class="check">Professional Aerial Imaging</div>
             <div class="check">Orange County Service</div>
             <div class="check">Los Angeles County Service</div>
-            <div class="check">DJI Matrice 4T Enterprise Technology</div>
+            <div class="check">DJI Air 3S Imaging Platform</div>
           </div>
         </div>
       </div>
@@ -282,24 +276,43 @@
           <h2>Put a safer view of your property within reach.</h2>
           <p>Every mission is different. Tell us about your property, inspection need or photography project, and PAS will provide a customized quote based on the site, airspace, scope and requested deliverables.</p>
           <div class="contact-list">
-            <div><strong>Phone:</strong> <a href="tel:+13105008734">(310) 500-8734</a></div>
-            <div><strong>Email:</strong> <a href="mailto:HaynEnterprisesLLC@gmail.com">HaynEnterprisesLLC@gmail.com</a></div>
+            <div><strong>Phone:</strong> <a href="tel:+17145011719">(714) 501-1719</a></div>
+            <div><strong>Email:</strong> <a href="mailto:info@pas-drone.com">info@pas-drone.com</a></div>
             <div><strong>Service Area:</strong> Orange County & Los Angeles County</div>
           </div>
         </div>
-        <form action="mailto:HaynEnterprisesLLC@gmail.com" method="post" enctype="text/plain">
-          <input name="Name" placeholder="Your name" required>
-          <input type="email" name="Email" placeholder="Your email" required>
-          <input type="tel" name="Phone" placeholder="Your phone number">
-          <select name="Service">
+        <form id="quote-form" action="/api/quote" method="post">
+          <div class="form-row">
+            <input name="name" placeholder="Your name" autocomplete="name" required maxlength="100">
+            <input type="email" name="email" placeholder="Your email" autocomplete="email" required maxlength="150">
+          </div>
+          <div class="form-row">
+            <input type="tel" name="phone" placeholder="Your phone number" autocomplete="tel" maxlength="40">
+            <input name="property_address" placeholder="Property address or city" autocomplete="street-address" maxlength="200">
+          </div>
+          <select name="service" required>
             <option value="">Select a service</option>
-            <option>Commercial inspection</option><option>Residential inspection</option>
-            <option>Thermal imaging</option><option>Aerial photography</option>
-            <option>Construction progress</option><option>Solar inspection</option><option>Insurance documentation</option><option>Real estate photography</option><option>Other</option>
+            <option>Commercial inspection</option>
+            <option>Residential roof inspection</option>
+            <option>Aerial photography</option>
+            <option>Construction progress</option>
+            <option>Solar inspection</option>
+            <option>Insurance documentation</option>
+            <option>Real estate photography</option>
+            <option>Other</option>
           </select>
-          <textarea name="Project details" placeholder="Property address, project details and desired deliverables"></textarea>
-          <button class="btn btn-red" type="submit">Request a Custom Quote</button>
-          <small style="color:#657184;text-align:center">Pricing is provided by custom quote based on mission requirements.</small>
+          <select name="timeline">
+            <option value="">Preferred timeline</option>
+            <option>As soon as possible</option>
+            <option>Within 1 week</option>
+            <option>Within 2–4 weeks</option>
+            <option>Planning ahead</option>
+          </select>
+          <textarea name="details" placeholder="Describe the property, inspection concern, approximate size and requested deliverables" required maxlength="3000"></textarea>
+          <label class="hp-field" aria-hidden="true">Leave this blank<input name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="btn btn-red" id="quote-submit" type="submit">Request a Custom Quote</button>
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          <small style="color:#657184;text-align:center">Your request is sent securely to Patriot Aerial Solutions. No email app will open.</small>
         </form>
       </div>
     </section>
@@ -308,8 +321,44 @@
   <footer>
     <div class="container footer-row">
       <span>© 2026 Patriot Aerial Solutions. All rights reserved.</span>
-      <span>Founded by Jason H. • Veteran Owned & Operated • Precision. Reliability. Results.</span>
+      <span>Veteran Owned & Operated • Precision. Reliability. Results.</span>
     </div>
   </footer>
+
+  <script>
+    const quoteForm = document.getElementById('quote-form');
+    const quoteButton = document.getElementById('quote-submit');
+    const formStatus = document.getElementById('form-status');
+
+    quoteForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      formStatus.className = 'form-status';
+      formStatus.textContent = '';
+      quoteButton.disabled = true;
+      quoteButton.textContent = 'Sending…';
+
+      try {
+        const response = await fetch(quoteForm.action, {
+          method: 'POST',
+          body: new FormData(quoteForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(result.message || 'Your request could not be sent.');
+
+        quoteForm.reset();
+        formStatus.textContent = 'Thank you. Your quote request was sent successfully. PAS will contact you soon.';
+        formStatus.className = 'form-status success show';
+      } catch (error) {
+        formStatus.textContent = error.message || 'Something went wrong. Please call (714) 501-1719 or email info@pas-drone.com.';
+        formStatus.className = 'form-status error show';
+      } finally {
+        quoteButton.disabled = false;
+        quoteButton.textContent = 'Request a Custom Quote';
+      }
+    });
+  </script>
+
 </body>
 </html>
